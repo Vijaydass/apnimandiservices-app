@@ -2,13 +2,13 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import isMultivendor from "../../../Middleware/isMultivendor";
 import auth from "../../../utils/auth";
 import InputCom from "../Helpers/InputCom";
 import PageTitle from "../Helpers/PageTitle";
-import {useSelector} from "react-redux";
 import ServeLangItem from "../Helpers/ServeLangItem";
 function BecomeSaller() {
   const router = useRouter();
@@ -19,6 +19,7 @@ function BecomeSaller() {
   const [phone, setPhone] = useState("");
   const [shopName, setName] = useState("");
   const [shopAddress, setAddress] = useState("");
+  const [shopGstNo, setGstNo] = useState("");
   const [errors, setErrors] = useState(null);
   let [uploadProgress, setProgress] = useState(0);
   const [uploadLogo, setUploadLogo] = useState(null);
@@ -91,6 +92,7 @@ function BecomeSaller() {
       formData.append("email", email);
       formData.append("phone", phone);
       formData.append("address", shopAddress);
+      formData.append("gst_no", shopGstNo);
       formData.append("open_at", "10.00AM");
       formData.append("closed_at", "10.00PM");
       formData.append("agree_terms_condition", checked);
@@ -298,6 +300,25 @@ function BecomeSaller() {
                       ""
                     )}
                   </div>
+                  <div className="mb-5">
+                    <InputCom
+                      placeholder="Gst No."
+                      label="Gst No."
+                      name="gst_no"
+                      type="text"
+                      inputClasses="h-[50px]"
+                      value={shopGstNo}
+                      inputHandler={(e) => setGstNo(e.target.value)}
+                      error={!!(errors && Object.hasOwn(errors, "gst_no"))}
+                    />
+                    {errors && Object.hasOwn(errors, "gst_no") ? (
+                      <span className="text-sm mt-1 text-qred">
+                        {errors.gst_no[0]}
+                      </span>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                   {/*<div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 sm:space-x-5 mb-[30px]">*/}
                   {/*  <InputCom*/}
                   {/*    placeholder="* * * * * *"*/}
@@ -338,7 +359,7 @@ function BecomeSaller() {
                     </button>
                     <Link href="/seller-terms-condition">
                       <span className="text-base text-black cursor-pointer">
-                        {ServeLangItem()?.I_agree_all_terms_and_condition_in_ecoShop}
+                      I agree all terms and condition in Apni Mandi Services
                       </span>
                     </Link>
                   </div>
