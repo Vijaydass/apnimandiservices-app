@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import React, { useContext, useState } from "react";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import apiRequest from "../../../../utils/apiRequest";
+import { fetchWishlist } from "../../../store/wishlistData";
+import LoginContext from "../../Contexts/LoginContext";
 import InputCom from "../../Helpers/InputCom";
 import LoaderStyleOne from "../../Helpers/Loaders/LoaderStyleOne";
-import { useDispatch } from "react-redux";
-import { fetchWishlist } from "../../../store/wishlistData";
 import ServeLangItem from "../../Helpers/ServeLangItem";
-import LoginContext from "../../Contexts/LoginContext";
 const SEND = ({ action }) => {
   return (
     <div>
@@ -169,7 +168,7 @@ function LoginWidget({ redirect = true, loginActionPopup,notVerifyHandler }) {
           </div>
           <Link href="/forgot-password" passhref>
             <a>
-              <span className="text-base text-qyellow cursor-pointer">
+              <span className="text-base text-green-400 cursor-pointer">
                 {ServeLangItem()?.Forgot_password}?
               </span>
             </a>

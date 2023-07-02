@@ -1,5 +1,5 @@
 // import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 // import axios from "axios";
 import { useRouter } from "next/router";
@@ -124,7 +124,7 @@ export default function SearchBox({ className }) {
                   {categories &&
                     categories.map((item, i) => (
                       <li onClick={() => categoryHandler(item)} key={i}>
-                        <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow cursor-pointer">
+                        <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-green-500 hover:text-green-500 cursor-pointer">
                           {item.name}
                         </span>
                       </li>

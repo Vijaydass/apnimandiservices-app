@@ -4,15 +4,15 @@ import "react-input-range/lib/css/index.css";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import ProductCardRowStyleOne from "../Helpers/Cards/ProductCardRowStyleOne";
 import ProductCardStyleOne from "../Helpers/Cards/ProductCardStyleOne";
 import DataIteration from "../Helpers/DataIteration";
-import Star from "../Helpers/icons/Star";
-import Layout from "../Partials/Layout";
-import ProductsFilter from "./ProductsFilter";
-import OneColumnAdsTwo from "../Home/ProductAds/OneColumnAdsTwo";
-import ProductCardRowStyleOne from "../Helpers/Cards/ProductCardRowStyleOne";
 import LoaderStyleOne from "../Helpers/Loaders/LoaderStyleOne";
 import ServeLangItem from "../Helpers/ServeLangItem";
+import Star from "../Helpers/icons/Star";
+import OneColumnAdsTwo from "../Home/ProductAds/OneColumnAdsTwo";
+import Layout from "../Partials/Layout";
+import ProductsFilter from "./ProductsFilter";
 
 export default function AllProductPage({ response, sellerInfo }) {
   const [resProducts, setProducts] = useState(null);
@@ -337,7 +337,7 @@ export default function AllProductPage({ response, sellerInfo }) {
                   backgroundSize: "cover",
                 }}
               >
-                {/*<div className="store-status w-[230px] h-[60px] bg-qyellow flex justify-end items-center rounded-full absolute top-[30px] -left-[30px]">*/}
+                {/*<div className="store-status w-[230px] h-[60px] bg-green-400 flex justify-end items-center rounded-full absolute top-[30px] -left-[30px]">*/}
                 {/*  <span className="text-[26px] font-600 mr-[30px]">*/}
                 {/*    {sellerInfo &&*/}
                 {/*      shopStatus(*/}
@@ -583,7 +583,7 @@ export default function AllProductPage({ response, sellerInfo }) {
                                   </svg>
                                 </span>
                               </div>
-                              <div className="w-[82px] transition-all duration-300 ease-in-out group-hover:h-4 h-[2px] bg-qyellow absolute ltr:left-0 rtl:right-0 bottom-0 z-10"></div>
+                              <div className="w-[82px] transition-all duration-300 ease-in-out group-hover:h-4 h-[2px] bg-green-400 absolute ltr:left-0 rtl:right-0 bottom-0 z-10"></div>
                             </div>
                           </a>
                         </Link>
@@ -653,7 +653,7 @@ export default function AllProductPage({ response, sellerInfo }) {
                       <button
                         onClick={() => setToggle(!filterToggle)}
                         type="button"
-                        className="w-10 lg:hidden h-10 rounded flex justify-center items-center border border-qyellow text-qyellow"
+                        className="w-10 lg:hidden h-10 rounded flex justify-center items-center border border-green-400 text-green-400"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -760,7 +760,7 @@ export default function AllProductPage({ response, sellerInfo }) {
                         <button
                           onClick={nextPageHandler}
                           type="button"
-                          className="w-[180px] h-[54px] bg-qyellow rounded mt-10"
+                          className="w-[180px] h-[54px] bg-green-400 rounded mt-10"
                         >
                           <div className="flex justify-center w-full h-full items-center group rounded relative transition-all duration-300 ease-in-out overflow-hidden cursor-pointer">
                             <div className="flex items-center transition-all duration-300 ease-in-out relative z-10  text-qblack hover:text-white">

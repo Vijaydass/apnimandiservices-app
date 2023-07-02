@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import settings from "../../../utils/settings";
 import BlogCard from "../Helpers/Cards/BlogCard";
 import DataIteration from "../Helpers/DataIteration";
+import PageTitle from "../Helpers/PageTitle";
+import ServeLangItem from "../Helpers/ServeLangItem";
+import SimpleSlider from "../Helpers/SliderCom";
 import FontAwesomeCom from "../Helpers/icons/FontAwesomeCom";
 import Star from "../Helpers/icons/Star";
-import PageTitle from "../Helpers/PageTitle";
-import SimpleSlider from "../Helpers/SliderCom";
 import Layout from "../Partials/Layout";
-import ServeLangItem from "../Helpers/ServeLangItem";
-import settings from "../../../utils/settings";
 export default function About({ aboutData }) {
   const settingTestimonial = {
     slidesToShow:
@@ -194,7 +194,7 @@ export default function About({ aboutData }) {
                 <button
                   onClick={prev}
                   type="button"
-                  className="w-[48px] h-[48px] rounded-full overflow-hidden flex justify-center items-center border border-qyellow text-qyellow focus:bg-qyellow focus:text-white"
+                  className="w-[48px] h-[48px] rounded-full overflow-hidden flex justify-center items-center border border-green-400 text-green-400 focus:bg-green-400 focus:text-white"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +214,7 @@ export default function About({ aboutData }) {
                 <button
                   onClick={next}
                   type="button"
-                  className="w-[48px] h-[48px] rounded-full overflow-hidden flex justify-center items-center border border-qyellow text-qyellow focus:bg-qyellow focus:text-white"
+                  className="w-[48px] h-[48px] rounded-full overflow-hidden flex justify-center items-center border border-green-400 text-green-400 focus:bg-green-400 focus:text-white"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +238,7 @@ export default function About({ aboutData }) {
         <div className="container-x mx-auto my-[60px]">
           <div
             data-aos="fade-down"
-            className="best-services w-full bg-qyellow flex flex-col space-y-10 lg:space-y-0 lg:flex-row lg:justify-between lg:items-center lg:h-[110px] px-10 lg:py-0 py-10"
+            className="best-services w-full bg-green-400 flex flex-col space-y-10 lg:space-y-0 lg:flex-row lg:justify-between lg:items-center lg:h-[110px] px-10 lg:py-0 py-10"
           >
             {aboutData &&
               aboutData.services.map((item) => (

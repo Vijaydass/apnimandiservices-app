@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import {useContext, useEffect, useState} from "react";
+import { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import apiRequest from "../../../../../utils/apiRequest";
 import { fetchWishlist } from "../../../../store/wishlistData";
 import Cart from "../../../Cart";
+import LoginContext from "../../../Contexts/LoginContext";
+import SearchBox from "../../../Helpers/SearchBox";
+import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Compair from "../../../Helpers/icons/Compair";
 import ThinBag from "../../../Helpers/icons/ThinBag";
 import ThinLove from "../../../Helpers/icons/ThinLove";
 import ThinPeople from "../../../Helpers/icons/ThinPeople";
-import SearchBox from "../../../Helpers/SearchBox";
-import ServeLangItem from "../../../Helpers/ServeLangItem";
-import LoginContext from "../../../Contexts/LoginContext";
 export default function Middlebar({ className, settings }) {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -147,7 +147,7 @@ export default function Middlebar({ className, settings }) {
                     style={{ zIndex: "35", margin: "0" }}
                   ></div>
                   <div
-                    className="w-[208px] h-[267px] bg-white absolute right-0 top-11 z-40 border-t-[3px] border-qyellow flex flex-col justify-between"
+                    className="w-[208px] h-[267px] bg-white absolute right-0 top-11 z-40 border-t-[3px] border-green-400 flex flex-col justify-between"
                     style={{
                       boxShadow: " 0px 15px 50px 0px rgba(0, 0, 0, 0.14)",
                     }}

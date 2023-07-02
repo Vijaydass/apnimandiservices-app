@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Arrow from "../../../Helpers/icons/Arrow";
 import FontAwesomeCom from "../../../Helpers/icons/FontAwesomeCom";
 import Multivendor from "../../../Shared/Multivendor";
-import ServeLangItem from "../../../Helpers/ServeLangItem";
 export default function Navbar({ className }) {
   const { websiteSetup } = useSelector((state) => state.websiteSetup);
   const categoryList = websiteSetup && websiteSetup.payload.productCategories;
@@ -326,7 +325,7 @@ export default function Navbar({ className }) {
                                             passHref
                                           >
                                             <a rel="noopener noreferrer">
-                                              <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow cursor-pointer cursor-pointer">
+                                              <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-green-500 hover:text-green-500 cursor-pointer cursor-pointer">
                                                 {subItem.sub_category &&
                                                   subItem.sub_category.name}
                                               </span>
@@ -408,7 +407,7 @@ export default function Navbar({ className }) {
                                           </svg>
                                         </span>
                                       </div>
-                                      <div className="w-[82px] transition-all duration-300 ease-in-out group-hover:h-4 h-[0px] bg-qyellow absolute left-0 bottom-0 z-10"></div>
+                                      <div className="w-[82px] transition-all duration-300 ease-in-out group-hover:h-4 h-[0px] bg-green-500 absolute left-0 bottom-0 z-10"></div>
                                     </div>
                                   </a>
                                 </Link>
@@ -479,7 +478,7 @@ export default function Navbar({ className }) {
                                 <li>
                                   <Link href="/privacy-policy" passHref>
                                     <a rel="noopener noreferrer">
-                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow cursor-pointer">
+                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-green-500 hover:text-green-500 cursor-pointer">
                                         {ServeLangItem()?.Privacy_Policy}
                                       </span>
                                     </a>
@@ -488,7 +487,7 @@ export default function Navbar({ className }) {
                                 <li>
                                   <Link href="/terms-condition" passHref>
                                     <a rel="noopener noreferrer">
-                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow cursor-pointer">
+                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-green-500 hover:text-green-500 cursor-pointer">
                                         {ServeLangItem()?.Term_and_Conditions}
                                       </span>
                                     </a>
@@ -501,7 +500,7 @@ export default function Navbar({ className }) {
                                       passHref
                                     >
                                       <a rel="noopener noreferrer">
-                                        <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow cursor-pointer">
+                                        <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-green-500 hover:text-green-500 cursor-pointer">
                                           {
                                             ServeLangItem()
                                               ?.Seller_terms_and_conditions
@@ -514,7 +513,7 @@ export default function Navbar({ className }) {
                                 <li>
                                   <Link href="/faq" passHref>
                                     <a rel="noopener noreferrer">
-                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow cursor-pointer">
+                                      <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-green-500 hover:text-green-500 cursor-pointer">
                                         {ServeLangItem()?.FAQ}
                                       </span>
                                     </a>
@@ -531,7 +530,7 @@ export default function Navbar({ className }) {
                                           passHref
                                         >
                                           <a rel="noopener noreferrer">
-                                            <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-qyellow hover:text-qyellow cursor-pointer">
+                                            <span className="text-qgray text-sm font-400 border-b border-transparent hover:border-green-500 hover:text-green-500 cursor-pointer">
                                               {item.page_name}
                                             </span>
                                           </a>

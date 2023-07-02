@@ -1,11 +1,11 @@
 import Link from "next/link";
-import React,{ useState } from "react";
-import Compair from "../../Helpers/icons/Compair";
-import ThinLove from "../../Helpers/icons/ThinLove";
-import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import FontAwesomeCom from "../../Helpers/icons/FontAwesomeCom";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import ServeLangItem from "../../Helpers/ServeLangItem";
+import Compair from "../../Helpers/icons/Compair";
+import FontAwesomeCom from "../../Helpers/icons/FontAwesomeCom";
+import ThinLove from "../../Helpers/icons/ThinLove";
 
 export default function Drawer({ className, open, action }) {
   const router = useRouter();
@@ -51,7 +51,7 @@ export default function Drawer({ className, open, action }) {
                       <Compair />
                     </span>
                   </Link>
-                  <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                  <span className="w-[18px] h-[18px] rounded-full bg-green-400 absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                     2
                   </span>
                 </div>
@@ -61,7 +61,7 @@ export default function Drawer({ className, open, action }) {
                       <ThinLove />
                     </span>
                   </Link>
-                  <span className="w-[18px] h-[18px] rounded-full bg-qyellow absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
+                  <span className="w-[18px] h-[18px] rounded-full bg-green-400 absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px]">
                     1
                   </span>
                 </div>
@@ -103,7 +103,7 @@ export default function Drawer({ className, open, action }) {
               </div>
               <div
                 onClick={searchHandler}
-                className="cursor-pointer w-[40px] h-full bg-qyellow flex justify-center items-center"
+                className="cursor-pointer w-[40px] h-full bg-green-400 flex justify-center items-center"
               >
                 <span>
                   <svg
@@ -153,7 +153,7 @@ export default function Drawer({ className, open, action }) {
                           query: { category: item.slug },
                         }}
                       >
-                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span>
                               <span>
@@ -206,7 +206,7 @@ export default function Drawer({ className, open, action }) {
               <ul className="categories-list">
                 <li className="category-item">
                   <Link href="#">
-                    <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                    <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400 capitalize">{ServeLangItem()?.Pages}</span>
                       </div>
@@ -243,7 +243,7 @@ export default function Drawer({ className, open, action }) {
                   <ul className="submenu-list ml-5">
                     <li className="category-item">
                       <Link href="/privacy-policy">
-                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span className="text-sm font-400 capitalize">
                               {ServeLangItem()?.Privacy_Policy}
@@ -282,7 +282,7 @@ export default function Drawer({ className, open, action }) {
                     </li>
                     <li className="category-item">
                       <Link href="/faq">
-                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span className="text-sm font-400 capitalize">{ServeLangItem()?.FAQ}</span>
                           </div>
@@ -319,7 +319,7 @@ export default function Drawer({ className, open, action }) {
                     </li>
                     <li className="category-item">
                       <Link href="/terms-condition">
-                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                        <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                           <div className="flex items-center space-x-6">
                             <span className="text-sm font-400 capitalize">
                               {ServeLangItem()?.Term_and_Conditions}
@@ -402,7 +402,7 @@ export default function Drawer({ className, open, action }) {
                             <React.Fragment key={i}>
                               <li className="category-item">
                                 <Link href={`/pages?custom=${item.slug}`} passHref>
-                                  <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                                  <div className=" flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                                     <div className="flex items-center space-x-6">
                                   <span className="text-sm font-400 capitalize capitalize ">
                                     {item.page_name}
@@ -446,7 +446,7 @@ export default function Drawer({ className, open, action }) {
 
                 <li className="category-item">
                   <Link href="/about">
-                    <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                    <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400 capitalize">{ServeLangItem()?.About}</span>
                       </div>
@@ -483,7 +483,7 @@ export default function Drawer({ className, open, action }) {
                 </li>
                 <li className="category-item">
                   <Link href="/Blogs">
-                    <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                    <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400 capitalize">{ServeLangItem()?.blogs}</span>
                       </div>
@@ -520,7 +520,7 @@ export default function Drawer({ className, open, action }) {
                 </li>
                 <li className="category-item">
                   <Link href="/contact">
-                    <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-qyellow transition-all duration-300 ease-in-out cursor-pointer">
+                    <div className="flex justify-between items-center px-5 h-12 bg-white hover:bg-green-400 transition-all duration-300 ease-in-out cursor-pointer">
                       <div className="flex items-center space-x-6">
                         <span className="text-sm font-400 capitalize">Contact</span>
                       </div>

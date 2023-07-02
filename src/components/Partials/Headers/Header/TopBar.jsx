@@ -1,9 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import Arrow from "../../../Helpers/icons/Arrow";
-import Selectbox from "../../../Helpers/Selectbox";
 // import ThinPeople from "../../../Helpers/icons/ThinPeople";
-import auth from "../../../../../utils/auth";
 import { useEffect, useState } from "react";
 import ServeLangItem from "../../../Helpers/ServeLangItem";
 import Multivendor from "../../../Shared/Multivendor";
@@ -157,7 +153,7 @@ export default function TopBar({ className, contact }) {
                 <div className="block lg:hidden">
                   <Link href="/become-seller" passHref>
                     <a rel="noopener noreferrer">
-                  <span className="text-xs leading-6 text-qblack px-3 py-1 bg-qyellow font-medium font-500 cursor-pointer">
+                  <span className="text-xs leading-6 text-qblack px-3 py-1 bg-green-400 font-medium font-500 cursor-pointer">
                     {ServeLangItem()?.Become_seller}
                   </span>
                     </a>
